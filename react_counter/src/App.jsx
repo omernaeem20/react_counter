@@ -1,16 +1,30 @@
+
+import { useState } from 'react';
 import './App.css'
 
 function App() {
 
-  let counter = 5
+    const [counter, setCounter] = useState(5)
+
+  // let counter = 5
+
 
   const addValue = () =>{
-    counter = counter + 1
+    
+  
+    // counter = counter + 1
+  
+    setCounter (counter + 1)  //First method to write counter updated value
+      // console.log ("clicked", counter);
+
 
   };
 
   const removeValue = () =>{
-   counter = counter-1
+  
+  //second method to write counter updated value
+    setCounter(counter-1)
+    // console.log ("clicked", counter); 
   
   }
 
