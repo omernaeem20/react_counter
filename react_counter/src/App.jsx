@@ -4,30 +4,29 @@ import './App.css'
 
 function App() {
 
-    const [counter, setCounter] = useState(5)
+    let [counter, setCounter] = useState(5)
 
   // let counter = 5
 
-
   const addValue = () =>{
-    
-  
+
     // counter = counter + 1
   
     setCounter (counter + 1)  //First method to write counter updated value
       // console.log ("clicked", counter);
 
-
-  };
-
+    }
   const removeValue = () =>{
   
   //second method to write counter updated value
     setCounter(counter-1)
-    // console.log ("clicked", counter); 
-  
-  }
 
+    if(counter==0){
+       setCounter (counter = 0)
+    }
+
+       // console.log ("clicked", counter); 
+    }
   return (
 
     <>
@@ -50,4 +49,4 @@ function App() {
   
 }
 
-export default App;
+export default App
